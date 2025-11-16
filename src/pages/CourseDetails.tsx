@@ -27,7 +27,7 @@ const CourseDetails = () => {
     rating: 4.8,
     students: 12450,
     duration: "40 hours",
-    price: 99,
+    price: 0,
     category: "Web Development",
     difficulty: "Intermediate",
     image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1200&h=600&fit=crop",
@@ -126,12 +126,15 @@ const CourseDetails = () => {
                 </div>
                 <CardContent className="p-6 space-y-4">
                   <div className="text-center">
-                    <span className="text-4xl font-bold text-primary">${course.price}</span>
+                    <span className="text-5xl font-bold bg-gradient-to-r from-success to-primary bg-clip-text text-transparent">FREE</span>
+                    <p className="text-sm text-muted-foreground mt-1">No payment required</p>
                   </div>
-                  <Button className="w-full" size="lg">
-                    Enroll Now
-                  </Button>
-                  <p className="text-xs text-center text-muted-foreground">30-day money-back guarantee</p>
+                  <Link to="/auth" className="w-full block">
+                    <Button className="w-full" size="lg">
+                      Enroll Now - Start Learning
+                    </Button>
+                  </Link>
+                  <p className="text-xs text-center text-muted-foreground">Full lifetime access • Enroll instantly</p>
                   <Separator />
                   <div className="space-y-2">
                     <h4 className="font-semibold">This course includes:</h4>
